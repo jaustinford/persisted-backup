@@ -1,6 +1,6 @@
-FROM python:3.9.19-bookworm
+# syntax=docker/dockerfile:1
 
-ARG TARGETARCH
+FROM python:3.9.19-bookworm
 
 RUN \
     apt update -y && \
