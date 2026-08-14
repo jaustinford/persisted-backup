@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=../schemas/persisted-backups.json
+# yaml-language-server: $schema=../schemas/persisted-backup.json
 ---
 persisted_backup:
 
