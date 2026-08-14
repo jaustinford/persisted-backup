@@ -17,11 +17,11 @@ def get_smb_mount():
     value for 'BACKUP_DISK_MOUNTPOINT'.
     """
 
-    if os.environ.get("BACKUP_DISK_MOUNTPOINT") == "/grail-dst":
-        smb_mount = "/grail-src"
+    if os.environ.get("BACKUP_DISK_MOUNTPOINT") == "/persisted-backup-dst":
+        smb_mount = "/persisted-backup-src"
 
-    elif os.environ.get("BACKUP_DISK_MOUNTPOINT") == "/grail-src":
-        smb_mount = "/grail-dst"
+    elif os.environ.get("BACKUP_DISK_MOUNTPOINT") == "/persisted-backup-src":
+        smb_mount = "/persisted-backup-dst"
 
     return smb_mount
 
@@ -32,12 +32,12 @@ def process_backup(backup_direction: str, backup_target: str):
     """
 
     if backup_direction == "forward":
-        src_root = "/grail-src/"
-        dst_root = "/grail-dst/"
+        src_root = "/persisted-backup-src/"
+        dst_root = "/persisted-backup-dst/"
 
     elif backup_direction == "reverse":
-        src_root = "/grail-dst/"
-        dst_root = "/grail-src/"
+        src_root = "/persisted-backup-dst/"
+        dst_root = "/persisted-backup-src/"
 
     backup_target_src_fq = src_root + backup_target
     backup_target_dst_fq = dst_root + backup_target
@@ -83,7 +83,7 @@ def iterate_objects():
 
     if not os.path.islink(os.environ.get("BACKUP_DISK_MOUNTPOINT")):
         os.symlink(
-            "/grail-disk/" + os.environ.get("BACKUP_OBJECT").split("-")[0],
+            "/persisted-backup-disk/" + os.environ.get("BACKUP_OBJECT").split("-")[0],
             os.environ.get("BACKUP_DISK_MOUNTPOINT")
         )
 

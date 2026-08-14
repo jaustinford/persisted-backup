@@ -1,5 +1,5 @@
 ---
 include:
-  - project: elise/utilities/shared-cicd
+  - project: elise/utils/shared-cicd
     ref: main
     file: .gitlab-ci.yml

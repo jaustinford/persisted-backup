@@ -12,7 +12,7 @@ RUN \
         pyyaml \
         hvac
 
-WORKDIR /grail
+WORKDIR /persisted-backup
 
 COPY src/ ./src/
 COPY conf/ ./conf/

@@ -1,8 +1,8 @@
 {
-  "title": "grail backups",
+  "title": "persisted backup configuration",
   "description": "main configuration",
   "properties": {
-    "backups": {
+    "persisted_backup": {
       "type": "object",
       "description": "parent object",
       "properties": {

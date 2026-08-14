@@ -1,6 +1,6 @@
-# yaml-language-server: $schema=../schemas/backups.json
+# yaml-language-server: $schema=../schemas/persisted-backups.json
 ---
-backups:
+persisted_backup:
 
   # Files with these extensions will not be checksummed
   # if the dst file exists, instead a comparison is made of
@@ -103,18 +103,25 @@ backups:
 
     - name: app
       targets:
-        - deluge
+        - bazarr
         - elasticsearch
         - filebrowser
         - gitlab
+        - gluetun
         - keycloak
         - nexus
         - nginx
         - openvpnas
         - pihole
         - plex
+        - prowlarr
+        - qbittorrent
+        - radarr
         - redis
-        - runner
+        - runner-admin
+        - runner-user
+        - seerr
+        - sonarr
         - tautulli
         - vault
         - zoneminder
