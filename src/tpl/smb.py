@@ -12,18 +12,16 @@ import tpl.vault
 
 MAIN_LOG = constants.logging.getLogger(__name__)
 
-def mount(smb_mount: str):
+def mount(smb_mount: str, vault_token: str):
     """
     Use token to access Samba credentials
     and create a non-persisted mount to
     authorized shares.
     """
 
-    vault_token = tpl.vault.approle_login(constants.SMB_APPROLE)
-
     smb_auth = tpl.vault.get_secret(
         vault_token,
-        "users/raid/" + constants.SMB_VAULT_PATH
+        constants.SMB_VAULT_PATH
     )
 
     smb_username = smb_auth["USERNAME"]

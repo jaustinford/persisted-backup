@@ -47,10 +47,10 @@ CONFIG_NON_CHECKSUM_EXTS = CONF_PERSISTED_BACKUP_YAML["non_checksum_exts"]
 CONFIG_OBJECTS           = CONF_PERSISTED_BACKUP_YAML["objects"]
 
 VAULT_ENDPOINT = os.environ.get("VAULT_ENDPOINT")
+VAULT_APPROLE  = os.environ.get("VAULT_APPROLE")
 
 SMB_SHARE_HOST = os.environ.get("SMB_SHARE_HOST")
 SMB_SHARE_NAME = os.environ.get("SMB_SHARE_NAME")
 SMB_SHARE_UID  = os.environ.get("SMB_SHARE_UID")
 SMB_SHARE_GID  = os.environ.get("SMB_SHARE_GID")
-SMB_APPROLE    = os.environ.get("SMB_APPROLE")
 SMB_VAULT_PATH = os.environ.get("SMB_VAULT_PATH")

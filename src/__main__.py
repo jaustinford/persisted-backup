@@ -9,6 +9,7 @@ import traceback
 import constants
 import gbackup
 import tpl.smb
+import tpl.vault
 
 MAIN_LOG = constants.logging.getLogger(__name__)
 
@@ -19,9 +20,11 @@ def main():
     """
 
     if os.environ.get("BACKUP_OBJECT").startswith("raid"):
+        vault_token = tpl.vault.approle_login(constants.VAULT_APPROLE)
+
         smb_mount = gbackup.get_smb_mount()
 
-        tpl.smb.mount(smb_mount)
+        tpl.smb.mount(smb_mount, vault_token)
 
     try:
         gbackup.iterate_objects()
