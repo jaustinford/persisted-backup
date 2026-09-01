@@ -46,7 +46,7 @@ def mount(smb_mount: str, vault_token: str):
             "--options",
             "credentials=/tmp/.smbcredentials," + \
                 "uid=" + constants.SMB_SHARE_UID + ",gid=" + constants.SMB_SHARE_GID + \
-                ",dir_mode=0700,file_mode=0600,vers=3.11,seal"
+                ",dir_mode=0700,file_mode=0600,vers=3.11,seal,iocharset=utf8"
         ],
         capture_output=True,
         text=True,
