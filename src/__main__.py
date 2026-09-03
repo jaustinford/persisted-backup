@@ -5,7 +5,6 @@ backup sources.
 
 import os
 import traceback
-import time
 
 import constants
 import gbackup
@@ -39,8 +38,6 @@ def main():
 
         if os.environ.get("BACKUP_OBJECT").startswith("raid"):
             tpl.smb.unmount(smb_mount)
-
-    time.sleep(50000)
 
 if __name__ == "__main__":
     main()
