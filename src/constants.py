@@ -16,7 +16,7 @@ SRC_DIR        = os.path.dirname(CONSTANTS_FILE)
 PROJECT_DIR    = os.path.dirname(SRC_DIR)
 
 CONF_DIR                   = os.path.join(PROJECT_DIR, "conf")
-CONF_PERSISTED_BACKUP_FILE = os.path.join(CONF_DIR, "persisted-backups.yaml")
+CONF_PERSISTED_BACKUP_FILE = os.path.join(CONF_DIR, "persisted-backup.yaml")
 
 ##################################################
 # read configurations
