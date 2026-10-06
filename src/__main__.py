@@ -4,6 +4,7 @@ backup sources.
 """
 
 import os
+import sys
 import traceback
 
 import constants
@@ -38,6 +39,8 @@ def main():
 
         if os.environ.get("BACKUP_OBJECT").startswith("raid"):
             tpl.smb.unmount(smb_mount)
+
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
