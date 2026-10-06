@@ -81,30 +81,11 @@ persisted_backup:
         - red/tv-main/W*
         - red/tv-main/Y*
 
-    - name: app
+    - name: project
       targets:
-        - b*
-        - e*
-        - f*
-        - gi*
-        - gl*
+        - c*
         - k*
-        - ne*
-        - ng*
-        - o*
-        - pi*
-        - pl*
-        - pr*
-        - q*
-        - ra*
-        - re*
-        - runner-a*
-        - runner-u*
-        - se*
-        - so*
-        - t*
-        - v*
-        - z*
+        - s*
 
   # project logging values for the 'MAIN_LOG'
   # object.

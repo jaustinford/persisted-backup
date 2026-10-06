@@ -24,7 +24,7 @@
               "name": {
                 "type": "string",
                 "description": "name of object",
-                "pattern": "^(raid-[1-4]|app)$"
+                "pattern": "^(raid-[1-4]|project)$"
               },
               "targets": {
                 "type": "array",
