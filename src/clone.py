@@ -76,7 +76,7 @@ def manage_dir(backup_direction: str, dst_root: str, src_dir: str, dst_dir: str)
         os.chmod(dst_dir, src_dir_stat_mode)
 
     elif backup_direction == "reverse":
-        if not os.path.isdir(dst_dir):
+        if not os.path.isdir(dst_dir) and os.path.isdir(src_dir):
             MAIN_LOG.info("Removing dir : %s", re.sub("0;94m", "0;31m", dst_relative))
             shutil.rmtree(src_dir)
 
